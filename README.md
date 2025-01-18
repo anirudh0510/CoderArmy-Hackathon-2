@@ -5,7 +5,7 @@ My website is  on the Topic (Daily Writing Goal Tracker) , coder army hackathon-
 
 
 
-**1-Introduction**
+#**1-Introduction**
 The Daily Writing Goal Tracker is a web-based productivity tool designed to help writers set, manage, and achieve their daily writing objectives. Whether you are a student, blogger, or professional author, this application provides a structured approach to writing by combining goal tracking, calendar planning, and mind mapping, in Goal tracker user can write in the text editor with to TO-DO list functionality and can be saved date wise later but the saving part is not added to website because Backend is not implemented yet. And in Calander planner the user can write and make templates according to dates so that the productivity can be maximized.And lastly the Mind Map page to create outlines of your tasks beautifully.
 
 
