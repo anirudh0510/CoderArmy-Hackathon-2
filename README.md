@@ -30,11 +30,13 @@ A user-friendly interface designed to enhance usability.
 
 Responsive Design:
 Optimized for mobile and desktop devices.
-(Add Screenshot Here)
+![image](https://github.com/user-attachments/assets/d857eeed-96b4-4146-a113-ad088bb16150)
+
 
 Real-Time Updates:
 Instant feedback on goal progress as you input data.
-(Add Screenshot Here)
+
+
 
 
 
@@ -44,19 +46,19 @@ Visit Daily Writing Goal Tracker.
 
 Set Your Goal:
 Enter your daily writing target in the provided field and click the "Set Goal" button.
-(Add Screenshot Here)
+![image](https://github.com/user-attachments/assets/e2e0ac67-1dc8-41f4-b2a3-0b63b302da4c)
+![image](https://github.com/user-attachments/assets/82d68da1-8760-4909-b137-1c766dcc79d6)
+
+
 
 Plan Your Writing:
 Use the calendar to allocate writing sessions and deadlines.
-(Add Screenshot Here)
+![image](https://github.com/user-attachments/assets/bbfdafb2-9338-4b1c-9b4a-f800d97afa57)
 
 Map Your Ideas:
 Navigate to the mind map creator and start linking your ideas.
-(Add Screenshot Here)
+![image](https://github.com/user-attachments/assets/810914f7-9d56-42bc-83bc-cbf7b6a7d16e)
 
-Track Your Progress:
-Monitor your daily writing achievements and adjust goals as needed.
-(Add Screenshot Here)
 
 
 
@@ -73,8 +75,8 @@ JavaScript: Interactive functionalities and dynamic elements.
 User Authentication:
 Enable users to save progress and access personalized data.
 
-Dark Mode:
-Add a dark mode toggle for better usability at night.
+Light Mode:
+Add a Light mode toggle for better usability at night.
 
 Export and Share:
 Allow users to export their mind maps and share progress.
@@ -84,3 +86,8 @@ Integrate AI-powered suggestions to improve writing quality.
 
 Multilingual Support:
 Expand the application's reach by supporting multiple languages.
+
+Backend:
+Backend implementaion is pending 
+
+Login Page
