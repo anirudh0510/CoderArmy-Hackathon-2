@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Map Creator</title>
+    <link rel="stylesheet" href="mmap.css">
+</head>
+<body>
+    <header>
+        <h1>Mind Map </h1>
+    </header>
+    <div id="toolbar">
+        <button id="add-node">Add Node</button>
+        <button id="connect-nodes">Connect Nodes</button>
+        <button id="delete-node">Delete Node</button>
+        <button id="undo">Undo</button>
+        <button id="redo">Redo</button>
+        <label for="color-picker">Node Color:</label>
+        <input type="color" id="color-picker" value="#ff0000">
+        <label for="color-picker">Line Color:</label>
+        <input type="color" id="line-color-picker" value="#000000">
+    </div>
+    <div id="canvas-container">
+        <canvas id="mindmap-canvas"></canvas>
+    </div>
+    <script src="mmap.js"></script>
+</body>
+</html>

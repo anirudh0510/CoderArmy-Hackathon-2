@@ -1,0 +1,394 @@
+/* Base Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: white;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('mid-bg.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  z-index: -2; 
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  mix-blend-mode: overlay;
+  z-index: -1; 
+}
+
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgb(235, 172, 172);
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  background: linear-gradient(120deg, 
+    #2c3e50,   
+    #34495e,   
+    #739295,   
+    #2c3e50,   
+    #34495e    
+  );
+  background-size: 200% 200%; 
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: auroraWave 4s ease-in-out infinite; 
+}
+
+/* Animation for the aurora wave */
+@keyframes auroraWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.editor-container {
+  border: 1px solid rgb(23, 23, 23);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background: black;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#add-todo{
+  margin-top: 10px;
+}
+.tool-button ,#add-todo{
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #656769;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tool-button:hover {
+  background: #0056b3;
+}
+#add-todo:hover{
+  background: #0056b3;
+}
+
+.editor {
+  min-height: 150px; /* Reduced from 300px to 150px */
+  border: none;
+  padding: 1rem;
+  background: black;
+  border-radius: 4px;
+  font-size: 1rem;
+  overflow-y: auto;
+}
+
+
+.editor:focus {
+  outline: none;
+}
+
+/* To-Do List Dropdown */
+ .todo-dropdown {
+  margin-top: 2rem;
+  text-align: left;
+}
+.todo-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(23, 23, 23);
+  background: black;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+h3{
+  font-size: 22px;
+  color: rgb(235, 172, 172);
+}
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#todo-list li {
+  padding: 0.5rem;
+  border: none;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-list li button {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#todo-list li button:hover {
+  background: #e60000;
+}
+
+#todo-input {
+  width: calc(100% - 90px);
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background: black;
+  color: white;
+  font-size: 15px;
+}
+
+.save-section {
+  text-align: center;
+  margin-top: 1rem;
+}
+.format-menu {
+  position: absolute;
+  background: #292929;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.format-menu.hidden {
+  display: none;
+}
+
+.format-menu button,
+.format-menu select {
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 3px;
+  background: #292929;
+  cursor: pointer;
+}
+
+.format-menu button:hover,
+.format-menu select:hover {
+  background: black;
+  color: #292929;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  background: black;
+  color: wheat;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets */
+@media (max-width: 768px) {
+main {
+  padding: 1.5rem 1rem;
+}
+
+.editor-container {
+  padding: 0.8rem;
+}
+
+.toolbar {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-button {
+  flex: 1 1 20%;
+  padding: 0.5rem;
+}
+
+#todo-input {
+  width: calc(100% - 70px);
+}
+
+.save-button {
+  padding: 0.8rem 1.2rem;
+  display: flex;
+}
+}
+
+/* For Mobile Phones */
+@media (max-width: 480px) {
+header {
+  padding: 1.5rem 0.5rem;
+}
+
+main {
+  padding: 1.2rem;
+}
+
+.editor-container {
+  padding: 0.5rem;
+}
+
+.toolbar {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-button {
+  flex: 1 1 30%;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+#todo-input {
+  width: calc(100% - 60px);
+}
+
+.save-button {
+  padding: 0.8rem 1rem;
+}
+
+footer {
+  padding: 1rem;
+}
+}
+
+
+
+
+
+
+
+/* to-do list  & save button */
+
+/* Shared Glowing Button Styles for dropdown-button and save-button */
+.dropdown-button, 
+.save-button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff; /* Text color */
+    background: #111; /* Button background */
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 0px; /* Ensures text is vertically centered */
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown-button:before, 
+.save-button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.dropdown-button:hover:before, 
+.save-button:hover:before {
+    opacity: 1; /* Glow becomes visible on hover */
+}
+
+.dropdown-button:after, 
+.save-button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111; /* Matches button background */
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.dropdown-button:active, 
+.save-button:active {
+    color: #000; /* Text color when active */
+}
+
+.dropdown-button:active:after, 
+.save-button:active:after {
+    background: transparent;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.save-button{
+  color: rgb(235, 172, 172);
+}
+.dropdown-button{
+  color: rgb(235, 172, 172);
+}
+

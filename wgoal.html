@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goal Treacker</title>
+  <link rel="stylesheet" href="wgoal.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Writing Goal Tracker</h1>
+    <p>Write, organize, and manage your notes seamlessly.</p>
+  </header>
+
+  <main>
+    <div class="editor-container">
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <button class="tool-button" data-command="formatBlock" data-value="h1">H1</button>
+        <button class="tool-button" data-command="formatBlock" data-value="h2">H2</button>
+        <button class="tool-button" data-command="formatBlock" data-value="p">Paragraph</button>
+        <button class="tool-button" data-command="insertUnorderedList">Bullet List</button>
+        <button class="tool-button" data-command="insertOrderedList">Numbered List</button>
+        <button class="tool-button" data-command="createLink">Link</button>
+      </div>
+      <!-- font menu -->
+      <div id="format-menu" class="format-menu hidden">
+        <button onclick="applyStyle('bold')">Bold</button>
+        <button onclick="applyStyle('italic')">Italic</button>
+        <button onclick="applyStyle('underline')">Underline</button>
+        <select id="font-size" onchange="changeFontSize(event)">
+          <option value="">Font Size</option>
+          <option value="14px">14px</option>
+          <option value="18px">18px</option>
+          <option value="24px">24px</option>
+          <option value="32px">32px</option>
+        </select>
+        <select id="font-family" onchange="changeFontFamily(event)">
+          <option value="">Font Style</option>
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Courier New">Courier New</option>
+        </select>
+        <input type="color" id="text-color" onchange="changeTextColor(event)" title="Text Color" />
+      </div>
+      
+
+      <!-- Text Editor -->
+      <div id="editor" contenteditable="true" class="editor">
+        <p>Start typing here...</p>
+      </div>
+    </div>
+    
+
+    <!-- Dropdown for To-Do List -->
+    <div class="todo-dropdown">
+      <button id="todo-toggle" class="dropdown-button">To-Do List ▼</button>
+      <div id="todo-box" class="todo-box hidden">
+        <h3>To-Do List</h3>
+        <ul id="todo-list"></ul>
+        <input type="text" id="todo-input" placeholder="Add a new task...">
+        <button id="add-todo">Add Task</button>
+      </div>
+    </div>
+     <!-- Save Button -->
+  <div class="save-section">
+    <button id="save-button" class="save-button">SAVE</button>
+  </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Text Editor with To-Do List. All Rights Reserved.</p>
+  </footer>
+
+  <script src="wgoal.js"></script>
+</body>
+</html>

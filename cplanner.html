@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar Planner</title>
+  <link rel="stylesheet" href="cplanner.css">
+</head>
+<body>
+  
+    
+  <div class="calendar">
+    <div class="header">
+      <button id="prev-date" class="nav-btn">Prev Date</button>
+      <button id="prev-month" class="nav-btn">Prev Month</button>
+      <span id="month-year" class="month-year"></span>
+      <button id="next-month" class="nav-btn">Next Month</button>
+      <button id="next-date" class="nav-btn">Next Date</button>
+    </div>
+    
+  
+    <div class="days">
+      <div class="day-header">
+        <div class="time-header">Time</div>
+        <div class="date-header" id="mon">Monday</div>
+        <div class="date-header" id="tue">Tuesday</div>
+        <div class="date-header" id="wed">Wednesday</div>
+        <div class="date-header" id="thu">Thursday</div>
+        <div class="date-header" id="fri">Friday</div>
+        <div class="date-header" id="sat">Saturday</div>
+        <div class="date-header" id="sun">Sunday</div>
+      </div>
+      
+      
+      <div class="time-grid">
+        <!-- Row for 9 AM -->
+        <div class="row">
+          <div class="time">9 AM</div>
+          <div class="cell" data-day="mon" data-time="9AM"></div>
+          <div class="cell" data-day="tue" data-time="9AM"></div>
+          <div class="cell" data-day="wed" data-time="9AM"></div>
+          <div class="cell" data-day="thu" data-time="9AM"></div>
+          <div class="cell" data-day="fri" data-time="9AM"></div>
+        </div>
+      
+        <!-- Row for 10 AM -->
+        <div class="row">
+          <div class="time">10 AM</div>
+          <div class="cell" data-day="mon" data-time="10AM"></div>
+          <div class="cell" data-day="tue" data-time="10AM"></div>
+          <div class="cell" data-day="wed" data-time="10AM"></div>
+          <div class="cell" data-day="thu" data-time="10AM"></div>
+          <div class="cell" data-day="fri" data-time="10AM"></div>
+        </div>
+      
+        <!-- Row for 11 AM -->
+        <div class="row">
+          <div class="time">11 AM</div>
+          <div class="cell" data-day="mon" data-time="11AM"></div>
+          <div class="cell" data-day="tue" data-time="11AM"></div>
+          <div class="cell" data-day="wed" data-time="11AM"></div>
+          <div class="cell" data-day="thu" data-time="11AM"></div>
+          <div class="cell" data-day="fri" data-time="11AM"></div>
+        </div>
+      
+        <!-- Row for 12 PM -->
+        <div class="row">
+          <div class="time">12 PM</div>
+          <div class="cell" data-day="mon" data-time="12PM"></div>
+          <div class="cell" data-day="tue" data-time="12PM"></div>
+          <div class="cell" data-day="wed" data-time="12PM"></div>
+          <div class="cell" data-day="thu" data-time="12PM"></div>
+          <div class="cell" data-day="fri" data-time="12PM"></div>
+        </div>
+      
+        <!-- Row for 1 PM -->
+        <div class="row">
+          <div class="time">1 PM</div>
+          <div class="cell" data-day="mon" data-time="1PM"></div>
+          <div class="cell" data-day="tue" data-time="1PM"></div>
+          <div class="cell" data-day="wed" data-time="1PM"></div>
+          <div class="cell" data-day="thu" data-time="1PM"></div>
+          <div class="cell" data-day="fri" data-time="1PM"></div>
+        </div>
+      
+        <!-- Row for 2 PM -->
+        <div class="row">
+          <div class="time">2 PM</div>
+          <div class="cell" data-day="mon" data-time="2PM"></div>
+          <div class="cell" data-day="tue" data-time="2PM"></div>
+          <div class="cell" data-day="wed" data-time="2PM"></div>
+          <div class="cell" data-day="thu" data-time="2PM"></div>
+          <div class="cell" data-day="fri" data-time="2PM"></div>
+        </div>
+      
+        <!-- Row for 3 PM -->
+        <div class="row">
+          <div class="time">3 PM</div>
+          <div class="cell" data-day="mon" data-time="3PM"></div>
+          <div class="cell" data-day="tue" data-time="3PM"></div>
+          <div class="cell" data-day="wed" data-time="3PM"></div>
+          <div class="cell" data-day="thu" data-time="3PM"></div>
+          <div class="cell" data-day="fri" data-time="3PM"></div>
+        </div>
+      
+        <!-- Row for 4 PM -->
+        <div class="row">
+          <div class="time">4 PM</div>
+          <div class="cell" data-day="mon" data-time="4PM"></div>
+          <div class="cell" data-day="tue" data-time="4PM"></div>
+          <div class="cell" data-day="wed" data-time="4PM"></div>
+          <div class="cell" data-day="thu" data-time="4PM"></div>
+          <div class="cell" data-day="fri" data-time="4PM"></div>
+        </div>
+      
+        <!-- Row for 5 PM -->
+        <div class="row">
+          <div class="time">5 PM</div>
+          <div class="cell" data-day="mon" data-time="5PM"></div>
+          <div class="cell" data-day="tue" data-time="5PM"></div>
+          <div class="cell" data-day="wed" data-time="5PM"></div>
+          <div class="cell" data-day="thu" data-time="5PM"></div>
+          <div class="cell" data-day="fri" data-time="5PM"></div>
+        </div>
+      
+        <!-- Row for 6 PM -->
+        <div class="row">
+          <div class="time">6 PM</div>
+          <div class="cell" data-day="mon" data-time="6PM"></div>
+          <div class="cell" data-day="tue" data-time="6PM"></div>
+          <div class="cell" data-day="wed" data-time="6PM"></div>
+          <div class="cell" data-day="thu" data-time="6PM"></div>
+          <div class="cell" data-day="fri" data-time="6PM"></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Planner Modal -->
+  <div id="planner-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" id="close-modal">&times;</span>
+    <h2>Task Planner</h2>
+    <form id="event-form">
+      <label for="task-name">Task Name:</label>
+      <input type="text" id="task-name" name="task-name" required>
+
+      <label for="task-time">Time:</label>
+      <input type="time" id="task-time" name="task-time" required>
+
+      <label for="task-details">Task Details:</label>
+      <textarea id="task-details" name="task-details" rows="4" required></textarea>
+
+      <button type="submit" id="save-task">Save Task</button>
+    </form>
+  </div>
+</div>
+<footer>
+  <p>&copy; 2025 Daily Writing Goal Tracker. All Rights Reserved.</p>
+</footer>
+
+
+  <script src="cplanner.js"></script>
+</body>
+</html>

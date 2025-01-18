@@ -1,0 +1,303 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* Parallax Header */
+  /* Parallax header styling */
+.parallax-header {
+  background: black;
+  background-image: url('header-bg.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+/* Font animation for header title (h1) */
+.parallax-header h1 {
+  font-size: 3rem;
+  background: linear-gradient(120deg, 
+    #2c3e50,   /* Dark Blue */
+    #34495e,   /* Blue Grey */
+    #739295,   /* Dark Grey */
+    #2c3e50,   /* Dark Blue */
+    #34495e    /* Blue Grey */
+  );
+  background-size: 200% 200%; /* Larger gradient size for smooth transitions */
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: auroraWave 4s ease-in-out infinite; /* Smooth wave movement */
+  margin-bottom: 0.5rem;
+  
+}
+
+/* Font animation for header paragraph (p) */
+.parallax-header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 3s ease;
+  color: rgb(235, 172, 172);
+}
+
+/* CTA Button styling */
+.cta-button {
+  background: black;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  animation: fadeIn 4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border: 1px solid rgb(15, 13, 13);
+}
+
+
+.cta-button:hover:before {
+  opacity: 1;
+}
+
+.cta-button:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.cta-button:active {
+  color: #000;
+}
+
+.cta-button:active:after {
+  background: transparent;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.cta-button:hover {
+  background: black;
+}
+
+
+/* Animation for the aurora wave */
+@keyframes auroraWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade-in animation for text */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+  
+  /* Features Section */
+/* Card Container */
+.features-section h2{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  background: black;
+  color: rgb(235, 172, 172);
+}
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:black;
+  border: 1px solid rgb(15, 13, 13);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.7s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+/* Hover Effect */
+.feature-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #0f2c36, #6f86d6);
+  color: #ffffff;
+}
+
+/* Title Styling */
+.feature-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: rgb(235, 172, 172);
+  transition: color 0.0s ease, transform 0.4s ease;
+}
+
+.feature-card:hover h3 {
+  color: black;
+  transform: translateY(-5px);
+}
+
+/* Paragraph Styling */
+.feature-card p {
+  font-size: 1.1rem;
+  color: rgb(235, 172, 172);
+  transition: color 0.0s ease, transform 0.4s ease;
+}
+
+.feature-card:hover p {
+  color: black;
+  transform: translateY(5px);
+}
+
+/* Grid Layout */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 25px;
+  background: black;
+}
+
+/* Link Styling */
+a.feature-card {
+  text-decoration: none;
+}
+
+a.feature-card:hover {
+  text-decoration: none;
+}
+
+  
+  /* Parallax Mid Section */
+  .parallax-mid {
+    background: black;
+    background-image: url('mid-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .parallax-mid h2 {
+    font-size: 2.5rem;
+    background: linear-gradient(120deg, 
+      #2c3e50,   /* Dark Blue */
+      #34495e,   /* Blue Grey */
+      #7f8c8d,   /* Dark Grey */
+      #2c3e50,   /* Dark Blue */
+      #34495e    /* Blue Grey */
+    );
+    background-size: 200% 200%; /* Larger gradient size for smooth transitions */
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: auroraWave 4s ease-in-out infinite; /* Smooth wave movement */
+  }
+  
+  /* Animation for the aurora wave */
+  @keyframes auroraWave {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+
+  
+  
+  /* About Section */
+  .about-section {
+    padding: 3rem 1.5rem;
+    background: black;
+    text-align: center;
+    color: rgb(235, 172, 172);
+  }
+  
+  .about-section h2 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background: #0e0d0d;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+
+
